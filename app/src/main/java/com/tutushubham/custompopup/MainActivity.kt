@@ -12,15 +12,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mypopup = CustomPopupComponent(this, R.layout.popup_dialog)
-
+        //val handler = Handler()
         showBtn.setOnClickListener {
             mypopup.showPopup(root_layout)
+            //handler.postDelayed(Runnable { mypopup.hidePopup()}, 5000)
         }
 
         hideBtn.setOnClickListener {
             mypopup.hidePopup()
         }
-
 
     }
 }
